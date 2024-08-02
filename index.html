@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles/reset.css" />
+        <link rel="stylesheet" href="styles/styles.css" />
+        <title>Form</title>
+    </head>
+    <body>
+        <main>
+            <div class="form wrapper">
+                <h1 class="form__main-title">Заявление на назначание и выплаты единовременного пособия</h1>
+                <form class="form_apply-info">
+                    <div class="form__applicant">
+                        <h2 class="form__title">Сведения о заявителе</h2>
+                        <div class="form__block">
+                            <label class="form__label" for="last-name">Фамилия<span class="form__required"></span></label>
+                            <input class="form__input form__input_required" type="text" id="last-name" name="last-name" required />
+                        </div>
+                        <div class="form__block">
+                            <label class="form__label" for="first-name">Имя<span class="form__required"></span></label>
+                            <input class="form__input form__input_required" type="text" id="first-name" name="first-name" required />
+                        </div>
+                        <div class="form__block">
+                            <label class="form__label" for="middle-name">Отчество</label>
+                            <input class="form__input" type="text" id="middle-name" name="middle-name" />
+                        </div>
+                        <div class="form__block">
+                            <label class="form__label" for="status">Статус <span class="form__required"></span></label>
+                            <input class="form__input form__input__status form__input_required" type="text" id="status" name="status" required />
+                        </div>
+                        <span class="form__text">(не работающий, студент и т.д.)</span>
+
+                        <div class="form__passport-info">
+                            <h2 class="form__title form__title__sub">Документ, удостоверяющий личность</h2>
+                            <div class="form__block">
+                                <label class="form__label" for="document-type">Тип документа<span class="form__required"></span></label>
+                                <select class="form__input form__input__full-width" id="document-type" name="document-type" required>
+                                    <option class="option" value="">Выберите из списка</option>
+                                    <option value="passport">паспорт гражданина Российской Федерации</option>
+                                    <option value="id-card">
+                                        свидетельство органов ЗАГСа, органа исполнительной власти или органа местного самоуправления о рождении гражданина
+                                    </option>
+                                    <option value="other">паспорт моряка (удостоверение личности моряка)</option>
+                                    <option value="other">удостоверение личности военнослужащего Российской Федерации</option>
+                                    <option value="other">военный билет военнослужащего</option>
+                                    <option value="other">временное удостоверение личности гражданина Российской Федерации</option>
+                                    <option value="other">справка об освобождении из мест лишения свободы</option>
+                                    <option value="other">паспорт иностранного гражданина или удостоверение личности лица без гражданства</option>
+                                    <option value="other">вид на жительство в Российской Федерации</option>
+                                    <option value="other">разрешение на временное проживание</option>
+                                    <option value="other">удостоверение беженца</option>
+                                    <option value="other">миграционная карта</option>
+                                    <option value="other">
+                                        паспорт гражданина СССР образца 1974 г. для некоторых категорий иностранных Адрес регистрации граждан и лиц без
+                                        гражданства
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="form__block">
+                                <label class="form__label" for="document-series">Серия<span id="series-required" class="form__required"></span></label>
+                                <input class="form__input form__input__small-width" type="text" id="document-series" name="document-series" />
+                            </div>
+                            <div class="form__block">
+                                <label class="form__label" for="document-number">Номер<span class="form__required"></span></label>
+                                <input class="form__input form__input__small-width" type="text" id="document-number" name="document-number" required />
+                            </div>
+                            <div class="form__block">
+                                <label class="form__label" for="document-date">Дата выдачи<span class="form__required"></span></label>
+                                <div class="form__input-wrapper">
+                                    <input class="form__input form__input__small-width" type="date" id="document-date" name="document-date" required />
+                                </div>
+                            </div>
+                            <div class="form__block">
+                                <label class="form__label" for="document-issued">Кем выдан<span class="form__required"></span></label>
+                                <input class="form__input form__input_200 form__input__high" type="text" id="document-issued" name="document-issued" required />
+                            </div>
+                        </div>
+
+                        <div class="form__address">
+                            <div class="form__block">
+                                <label class="form__label" for="reg-address">Адрес регистрации<span class="form__required"></span></label>
+                                <input class="form__input form__input_200 form__input__high" type="text" id="reg-address" name="reg-address" required />
+                            </div>
+                            <div class="form__block__buttons">
+                                <button class="btn clear">Очистить</button>
+                                <button class="btn catalog">Выбрать из справочника</button>
+                            </div>
+                            <div class="form__block">
+                                <label class="form__label" for="reg-flat">Квартира</label>
+                                <input class="form__input form__input__small-width" type="text" id="reg-flat" name="reg-flat" />
+                            </div>
+                            <div class="form__block form__block__checkbox">
+                                <input class="form__checkbox" type="checkbox" id="same-address" name="same-address" />
+                                <label class="form__label--checkbox" for="same-address">Адрес регистрации совпадает с почтовым адресом</label>
+                            </div>
+                            <div class="form__block">
+                                <label class="form__label" for="mailing-address">Почтовый адрес<span class="form__required"></span></label>
+                                <input class="form__input form__input_200 form__input__high" type="text" id="mailing-address" name="mailing-address" required />
+                            </div>
+                            <div class="form__block__buttons">
+                                <button class="btn clear">Очистить</button>
+                                <button class="btn catalog">Выбрать из справочника</button>
+                            </div>
+                            <div class="form__block">
+                                <label class="form__label" for="reg-flat">Квартира</label>
+                                <input class="form__input form__input__small-width" type="text" id="reg-flat" name="reg-flat" />
+                            </div>
+                            <div class="form__block">
+                                <label class="form__label" for="email">E-mail</label>
+                                <input class="form__input form__input__meduim-width" type="text" id="email" name="email" />
+                            </div>
+                            <div class="form__block">
+                                <label class="form__label" for="tel-number">Телефон(ы)</label>
+                                <input class="form__input form__input__meduim-width" type="text" id="tel-number" name="tel-number" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form__statement">
+                        <h2 class="form__title">Заявление</h2>
+                        <p class="form__text-bold">
+                            В соответствии с Федеральным законом от 19 мая 1995 года № 81-ФЗ «О государственных пособиях гражданам, имеющим детей» прошу
+                            назначить мне единовременное пособие при рождении ребенка
+                        </p>
+
+                        <div class="form__child-info">
+                            <h2 class="form__title form__title__sub">Информация о ребенке</h2>
+                            <div class="form__block">
+                                <label class="form__label" for="last-name">Фамилия<span class="form__required"></span></label>
+                                <input class="form__input form__input_required" type="text" id="last-name" name="last-name" required />
+                            </div>
+                            <div class="form__block">
+                                <label class="form__label" for="first-name">Имя<span class="form__required"></span></label>
+                                <input class="form__input form__input_required" type="text" id="first-name" name="first-name" required />
+                            </div>
+                            <div class="form__block">
+                                <label class="form__label" for="middle-name">Отчество</label>
+                                <input class="form__input" type="text" id="middle-name" name="middle-name" />
+                            </div>
+                            <div class="form__block">
+                                <label class="form__label" for="document-date">Дата рождения<span class="form__required"></span></label>
+                                <div class="form__input-wrapper">
+                                    <input class="form__input form__input__small-width" type="date" id="document-date" name="document-date" required />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form__payments">
+                            <div class="form__payments__wrap">
+                                <label class="form__label"
+                                    >Единовременное пособие при рождении ребенка прошу перечислять через<span
+                                        class="form__required form__required__allowance"
+                                    ></span
+                                ></label>
+                                <div class="form__radio-group">
+                                    <label>
+                                        <input type="radio" name="payment-option" value="option1" />
+                                        <span>организацию федеральной почтовой связи</span>
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="payment-option" value="option2" />
+                                        <span>кредитную организацию</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form__block form__block__number">
+                                <label class="form__label" for="organization-number"
+                                    >Номер организации федеральной почтовой связи<span class="form__required__organization"></span
+                                ></label>
+                                <div class="form__input-container">
+                                    <input
+                                        class="form__input form__input__small-width"
+                                        type="text"
+                                        id="organization-number"
+                                        name="organization-number"
+                                        required
+                                    />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form__details-info">
+                            <h2 class="form__title form__title__sub">Реквизиты моего счета</h2>
+                            <div class="form__block">
+                                <label class="form__label" for="details-number">Номер<span class="form__required"></span></label>
+                                <input class="form__input form__input_required" type="text" id="details-number" name="details-number" required />
+                            </div>
+                            <div class="form__block">
+                                <label class="form__label" for="banking-company-name"
+                                    >Наименование банковской организации<span class="form__required"></span
+                                ></label>
+                                <input class="form__input form__input_required" type="text" id="banking-company-name" name="banking-company-name" required />
+                            </div>
+                            <span class="form__text">(наименование банковской организации и его номер)</span>
+                            <div class="form__block">
+                                <label class="form__label" for="middle-name">№ Филиалла</label>
+                                <input class="form__input" type="text" id="middle-name" name="middle-name" />
+                            </div>
+                            <div class="form__block">
+                                <label class="form__label" for="banking-details">БИК<span class="form__required"></span></label>
+                                <input class="form__input form__input_required" type="text" id="banking-details" name="banking-details" required />
+                            </div>
+                            <div class="form__block">
+                                <label class="form__label" for="banking-details">ИНН<span class="form__required"></span></label>
+                                <input class="form__input form__input_required" type="text" id="banking-details" name="banking-details" required />
+                            </div>
+                            <div class="form__block">
+                                <label class="form__label" for="banking-details">КПП<span class="form__required"></span></label>
+                                <input class="form__input form__input_required" type="text" id="banking-details" name="banking-details" required />
+                            </div>
+                        </div>
+
+                        <div class="form__checkboxes">
+                            <label class="form__label__checkbox">
+                                <span class="form__required"></span>
+                                <input class="form__checkbox" type="checkbox" id="notify-obligations" name="notify-obligations" />
+                                в случае наступления обстоятельств, влекущих прекращение выплаты, обязуюсь сообщить о них в органы социальной защиты в 5 дневный
+                                срок
+                            </label>
+                            <label class="form__label__checkbox form__label__checkbox-bottom">
+                                <input class="form__checkbox" type="checkbox" id="no-workbook" name="no-workbook" />
+                                отсутствует трудовая книжка
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form__documents">
+                        <h2 class="form__title">Прилагаемые документы</h2>
+                        <div class="form__block">
+                            <p class="form__text-documents">Документ, подтверждающего личность</p>
+                            <div class="form__button">
+                                <span class="form__required__documents"></span>
+                                <button class="btn" id="attachButton">Прикрепить</button>
+                                <input type="file" id="fileInput" style="display: none" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form__button-send">
+                        <button class="form__send btn">Отправить</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+        <script src="script/identity-document.js"></script>
+        <script src="script/pay.js"></script>
+        <script src="script/attach-documents.js"></script>
+    </body>
+</html>
